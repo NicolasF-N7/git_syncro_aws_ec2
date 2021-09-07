@@ -55,4 +55,27 @@ sudo -s
 ### Add webhook on GitHub
 Payload URL: http://35.178.182.255(=EC2 inst IP):61440/github
 Content type: application/json
-Secret: e.g. Syncro 
+Secret: e.g. syncro
+
+### Install supervisor
+sudo -s
+npm install supervisor -g
+npm link
+
+### Install packages needed for the website
+cd ~/git_syncro_aws_ec2
+sudo -s
+npm install express cors dotenv ejs body-parser
+exit
+
+### Change perm so that we can launch our project
+cd ~
+sudo chown -R $USER git_syncro_aws_ec2
+sudo chown -R $USER node-cd
+sudo chown -R $USER ~/.ssh/git_syncro
+
+## Finally launch it !
+screen
+sudo -s
+cd ~/git_syncro_aws_ec2
+supervisor -s index.js
