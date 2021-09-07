@@ -23,7 +23,7 @@ sudo apt install git
 ### Add a new ssh key to the agent
 key: git_syncro
 passphrase: syncro
-eval $(ssh-agent) && ssh-add ~/.ssh/git_syncro
+eval $(ssh-agent) && ssh-add /home/ubuntu/.ssh/git_syncro
 
 ### Add the key to github repo
 Settings -> Deploy keys
