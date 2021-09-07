@@ -77,6 +77,9 @@ sudo chown -R $USER ~/.ssh/git_syncro
 
 ## Finally launch it !
 screen
+  screen -S name // new screen
+  ctrl a + d // detach screen
+  screen -r name // re attache a screen
 sudo -s
 cd ~/git_syncro_aws_ec2
 supervisor -s index.js
