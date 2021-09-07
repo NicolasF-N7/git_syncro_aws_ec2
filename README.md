@@ -21,8 +21,9 @@ sudo apt-get install -y nodejs
 sudo apt install git
 
 ### Add a new ssh key to the agent
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 key: git_syncro
-passphrase: syncro
+passphrase: "" (Important: no passphrase)
 eval $(ssh-agent) && ssh-add /home/ubuntu/.ssh/git_syncro
 
 ### Add the key to github repo
