@@ -42,7 +42,7 @@ cd node-cd
 npm install
 chmod +x bitbucket.sh contentful.sh github.sh
 vim github.sh
-"cd /home/ubuntu/ && eval $(ssh-agent) && ssh-add ~/.ssh/git_syncro && cd /home/ubuntu/git_syncro_aws_ec2 && git reset --hard && git pull --rebase origin master"
+"cd /home/ubuntu/ && eval $(ssh-agent) && ssh-add home/ubuntu/.ssh/git_syncro && cd /home/ubuntu/git_syncro_aws_ec2 && git reset --hard && git pull --rebase origin master"
 
 sudo -s
   chmod 777 /home/ubuntu/node-cd/config.js
