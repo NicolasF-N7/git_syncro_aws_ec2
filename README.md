@@ -35,7 +35,7 @@ cd __
 git pull --rebase origin master
 
 
-### Setup autoupdates
+### Setup auto-updates
 cd ~
 git clone https://github.com/A21z/node-cd.git
 cd node-cd
@@ -43,5 +43,11 @@ npm install
 chmod +x bitbucket.sh contentful.sh github.sh
 vim github.sh
 "cd /home/ubuntu/ && eval $(ssh-agent) && ssh-add ~/.ssh/git_syncro && cd /home/ubuntu/git_syncro_aws_ec2 && git reset --hard && git pull --rebase origin master"
+
 sudo -s
-chmod 777 /home/ubuntu/node-cd/config.js
+  chmod 777 /home/ubuntu/node-cd/config.js
+  add 140.82.115.0/16 to githubAuthorizedSubnets in config.js (So that only github servers can notify your ec2 instance to update git repo)
+  chmod 555 /home/ubuntu/node-cd/config.js
+  cd __/node-cd
+  export WWW_PORT=61440
+  node src/index.js
