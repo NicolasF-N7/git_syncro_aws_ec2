@@ -51,3 +51,8 @@ sudo -s
   cd __/node-cd
   export WWW_PORT=61440
   node src/index.js
+
+### Add webhook on GitHub
+Payload URL: http://35.178.182.255(=EC2 inst IP):61440/github
+Content type: application/json
+Secret: e.g. Syncro 
