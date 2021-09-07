@@ -80,6 +80,7 @@ screen
   screen -S name // new screen
   ctrl a + d // detach screen
   screen -r name // re attache a screen
+  Create one screen for the web server, and another for node-cd listening github events
 sudo -s
 cd ~/git_syncro_aws_ec2
 supervisor -s index.js
