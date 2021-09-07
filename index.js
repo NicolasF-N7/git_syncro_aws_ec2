@@ -8,5 +8,5 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
-  console.log("Access it via http://ec2-35-178-182-255.eu-west-2.compute.amazonaws.com:8000");
+  console.log("Access it via http://ec2-35-178-182-255.eu-west-2.compute.amazonaws.com:8000 !");
 });
