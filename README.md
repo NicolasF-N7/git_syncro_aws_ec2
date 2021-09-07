@@ -11,8 +11,8 @@ git remote add origin git@__.git\
 (ssh-add)\
 git push --set-upstream origin master\
 
-## Syncro with EC2
-### Install node on EC2
+## Deploy git repo to EC2 instance
+### Install node on EC2 instance
 (?) sudo -s
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -26,3 +26,22 @@ passphrase: syncro
 eval $(ssh-agent) && ssh-add ~/.ssh/git_syncro
 
 ### Add the key to github repo
+Settings -> Deploy keys
+
+### Clone repo on EC2 instance
+git init
+git clone ssh://__.git
+cd __
+git pull --rebase origin master
+
+
+### Setup autoupdates
+cd ~
+git clone https://github.com/A21z/node-cd.git
+cd node-cd
+npm install
+chmod +x bitbucket.sh contentful.sh github.sh
+vim github.sh
+"cd /home/ubuntu/ && eval $(ssh-agent) && ssh-add ~/.ssh/git_syncro && cd /home/ubuntu/git_syncro_aws_ec2 && git reset --hard && git pull --rebase origin master"
+sudo -s
+chmod 777 /home/ubuntu/node-cd/config.js
