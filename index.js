@@ -3,7 +3,7 @@ const app = express();
 const port = 80;
 
 app.get('/', (req, res) => {
-  res.send('Hello World test+2! <br><h1>WELCOME Dummies to this hello world site...</h1>')
+  res.send('Hello World test+2! <br><h1>WELCOME Dummies to this hello world site...</h1><br><a href="https://www.laboussole.io/">Where to go ?<a/>)
 });
 
 app.listen(port, () => {
